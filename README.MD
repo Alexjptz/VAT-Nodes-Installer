@@ -7,4 +7,4 @@ If you find this project helpful, a ⭐️ would be greatly appreciated!
 Sincerely,
 VATeam
 
-curl -O https://raw.githubusercontent.com/Alexjptz/VAT-Nodes-Installer/main/VAT_nodes_installer && chmod +x VAT_nodes_installer && ./VAT_nodes_installer
+curl -O https://raw.githubusercontent.com/Alexjptz/VAT-Nodes-Installer/refs/heads/main/VAT_nodes_installer.sh && chmod +x VAT_nodes_installer.sh && ./VAT_nodes_installer.sh
