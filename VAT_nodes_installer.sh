@@ -44,6 +44,7 @@ while true; do
     echo "7. RIVALS"
     echo "8. TITAN"
     echo "9. NESA"
+    echo "10. Выход (Exit)"
     echo ""
     read -p "Выберите ноду (Select node): " node
 
@@ -101,6 +102,12 @@ while true; do
             cd $HOME
             curl -O https://raw.githubusercontent.com/Alexjptz/Nesa-node/main/nesa_node.sh && chmod +x nesa_node.sh && ./nesa_node.sh
             rm $HOME/nesa_node.sh
+            ;;
+        10)
+            # Stop script and exit
+            echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
+            echo ""
+            exit 0
             ;;
         *)
             # incorrect options handling
