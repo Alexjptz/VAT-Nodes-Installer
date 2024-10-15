@@ -101,7 +101,7 @@ while true; do
             # Nesa
             cd $HOME
             curl -O https://raw.githubusercontent.com/Alexjptz/Nesa-node/main/nesa_node.sh && chmod +x nesa_node.sh && ./nesa_node.sh
-            rm $HOME/nesa_node.sh
+            rm ./nesa_node.sh
             ;;
         10)
             # Stop script and exit
