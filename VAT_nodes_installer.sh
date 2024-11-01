@@ -45,7 +45,8 @@ while true; do
     echo "8. TITAN"
     echo "9. NESA"
     echo "10. VANA"
-    echo "11. Выход (Exit)"
+    echo "11. T3RN"
+    echo "12. Выход (Exit)"
     echo ""
     read -p "Выберите ноду (Select node): " node
 
@@ -131,6 +132,14 @@ while true; do
             rm $HOME/vana_node.sh
             ;;
         11)
+            # T3RN
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/T3rn-node/master/t3rn_node.sh && \
+            chmod +x t3rn_node.sh && \
+            ./t3rn_node.sh && \
+            rm $HOME/t3rn_node.sh
+            ;;
+        12)
             # Stop script and exit
             echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
             echo ""
