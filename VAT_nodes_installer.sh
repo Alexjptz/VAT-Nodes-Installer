@@ -46,7 +46,10 @@ while true; do
     echo "9. NESA"
     echo "10. VANA"
     echo "11. T3RN"
-    echo "12. Выход (Exit)"
+    echo "12. Blockmesh"
+    echo "13. Network 3"
+    echo "14. ICN"
+    echo "15. Выход (Exit)"
     echo ""
     read -p "Выберите ноду (Select node): " node
 
@@ -140,6 +143,30 @@ while true; do
             rm $HOME/t3rn_node.sh
             ;;
         12)
+            # Blockmesh
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/Blockmesh-node/main/blockmesh_node.sh && \
+            chmod +x blockmesh_node.sh && \
+            ./blockmesh_node.sh && \
+            rm blockmesh_node.sh
+            ;;
+        13)
+            # Network 3
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/Network3-node/main/network3_node.sh && \
+            chmod +x network3_node.sh && \
+            ./network3_node.sh && \
+            rm network3_node.sh
+            ;;
+        14)
+            # ICN
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/ICN-node/main/icn_node.sh && \
+            chmod +x icn_node.sh && \
+            ./icn_node.sh && \
+            rm icn_node.sh
+            ;;
+        15)
             # Stop script and exit
             echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
             echo ""
