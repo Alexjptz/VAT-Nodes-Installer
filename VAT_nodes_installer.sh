@@ -49,7 +49,8 @@ while true; do
     echo "12. Blockmesh"
     echo "13. Network 3"
     echo "14. ICN"
-    echo "15. Выход (Exit)"
+    echo "15. Cysic"
+    echo "16. Выход (Exit)"
     echo ""
     read -p "Выберите ноду (Select node): " node
 
@@ -167,6 +168,14 @@ while true; do
             rm icn_node.sh
             ;;
         15)
+            # Cysic
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/Cysic-node/master/cysic_node.sh && \
+            chmod +x cysic_node.sh && \
+            ./cysic_node.sh && \
+            rm $HOME/cysic_node.sh
+            ;;
+        16)
             # Stop script and exit
             echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
             echo ""
