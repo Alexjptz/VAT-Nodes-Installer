@@ -50,7 +50,8 @@ while true; do
     echo "13. Network 3"
     echo "14. ICN"
     echo "15. Cysic"
-    echo "16. Выход (Exit)"
+    echo "16. Privasea"
+    echo "17. Выход (Exit)"
     echo ""
     read -p "Выберите ноду (Select node): " node
 
@@ -176,6 +177,14 @@ while true; do
             rm $HOME/cysic_node.sh
             ;;
         16)
+            # Privasea
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/Privasea-node/master/privasea_node.sh && \
+            chmod +x privasea_node.sh && \
+            ./privasea_node.sh && \
+            rm $HOME/privasea_node.sh
+            ;;
+        17)
             # Stop script and exit
             echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
             echo ""
