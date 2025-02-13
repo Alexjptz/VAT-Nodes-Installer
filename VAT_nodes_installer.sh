@@ -51,7 +51,8 @@ while true; do
     echo "14. ICN"
     echo "15. Cysic"
     echo "16. Privasea"
-    echo "17. Выход (Exit)"
+    echo "17. Pipe"
+    echo "18. Выход (Exit)"
     echo ""
     read -p "Выберите ноду (Select node): " node
 
@@ -185,6 +186,14 @@ while true; do
             rm $HOME/privasea_node.sh
             ;;
         17)
+            # PIPE
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/Pipe-node/master/pipe_node.sh && \
+            chmod +x pipe_node.sh && \
+            ./pipe_node.sh && \
+            rm $HOME/pipe_node.sh
+            ;;
+        18)
             # Stop script and exit
             echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
             echo ""
