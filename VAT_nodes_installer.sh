@@ -194,6 +194,14 @@ while true; do
             rm $HOME/pipe_node.sh
             ;;
         18)
+            # WAKU
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/Waku-node/master/waku_node.sh && \
+            chmod +x waku_node.sh && \
+            ./waku_node.sh && \
+            rm $HOME/waku_node.sh
+            ;;
+        18)
             # Stop script and exit
             echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
             echo ""
