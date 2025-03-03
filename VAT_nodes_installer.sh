@@ -52,7 +52,9 @@ while true; do
     echo "15. Cysic"
     echo "16. Privasea"
     echo "17. Pipe"
-    echo "18. Выход (Exit)"
+    echo "18. WAKU"
+    echo "19. HyperSpace"
+    echo "20. Выход (Exit)"
     echo ""
     read -p "Выберите ноду (Select node): " node
 
@@ -201,19 +203,27 @@ while true; do
             ./waku_node.sh && \
             rm $HOME/waku_node.sh
             ;;
-        18)
+        19)
+            # HYPERSPACE
+            cd $HOME && \
+            curl -O https://raw.githubusercontent.com/Alexjptz/Hyperspace-node/master/hypers_node.sh && \
+            chmod +x hypers_node.sh && \
+            ./hypers_node.sh && \
+            rm $HOME/hypers_node.sh
+            ;;
+        20)
             # Stop script and exit
             echo -e "\e[31mСкрипт остановлен (Script stopped)\e[0m"
-            echo ""
+            echo
             exit 0
             ;;
         *)
             # incorrect options handling
-            echo ""
+            echo
             echo -e "\e[31mНеверная опция\e[0m. Пожалуйста, выберите из тех, что есть."
-            echo ""
+            echo
             echo -e "\e[31mInvalid option.\e[0m Please choose from the available options."
-            echo ""
+            echo
             ;;
     esac
 done
